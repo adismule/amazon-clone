@@ -1,5 +1,6 @@
 import React from 'react'
-import { Routes, Route, redirect } from 'react-router-dom';import Landing from './Pages/Landing/Landing'
+import { BrowserRouter as Router, Routes, Route, redirect } from 'react-router-dom';
+import Landing from './Pages/Landing/Landing'
 import Payment from './Pages/Payment/Payment'
 import Auth from './Pages/Auth/Auth'
 import Orders from './Pages/Orders/Orders'
@@ -17,6 +18,7 @@ function Routing() {
 
   return (
     <>
+    <Router> 
         <Routes>
             <Route path="/" element={<Landing/>}/>
             <Route path="/auth" element={<Auth/>}/>
@@ -38,6 +40,7 @@ function Routing() {
             <Route path="/category/:categoryName" element={<Results />} />
             <Route path="/products/:productId" element={<ProductDetail />} />
         </Routes>
+        </Router>
     </>
   )
 }
