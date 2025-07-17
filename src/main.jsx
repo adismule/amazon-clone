@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { StrictMode } from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import './index.css'
@@ -8,9 +8,9 @@ import {initialState, reducer} from './Utility/reducer'
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <BrowserRouter basename="/Amazon-Project-Class-2025">
+  <StrictMode>
   <DataProvider>
     <App />
   </DataProvider>
-  </BrowserRouter>
+  </StrictMode>
 );
